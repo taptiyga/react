@@ -33,7 +33,9 @@ export default defineConfig([
         {
           varsIgnorePattern: '^_',
           argsIgnorePattern: '^_',
-          ignoreRestSiblings: true
+          ignoreRestSiblings: true,
+          caughtErrorsIgnorePattern: '^_',
+          ignoreJSX: true // вот эта опция
         }
       ],
       'no-console': 'warn',
