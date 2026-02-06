@@ -1,6 +1,8 @@
 :root {
-  --main-bg-color:#23272F;
-  --text-color:#fff;
+  --main-bg-color: #23272F;
+  --text-color: #fff;
+  --btn-bg-color: #383b3f;
+  --btn-text-color: #fff;
 
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -16,7 +18,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -35,13 +37,18 @@ body {
 
 @media (prefers-color-scheme: light) {
   :root {
-    --main-bg-color:#fff;
-    --text-color:#000;
+    --main-bg-color: #fff;
+    --text-color: #000;
+    --btn-bg-color: #16444f;
+      --btn-text-color: #57C4DC;
   }
 }
-@media (prefers-color-scheme: dark) {
+
+@media (prefers-color-scheme: light) {
   :root {
-    --main-bg-color:#23272F;
-    --text-color:#fff;
+    --main-bg-color: #23272F;
+    --text-color: #fff;
+    --btn-bg-color: #383b3f;
+    --btn-text-color: #fff;
   }
 }
