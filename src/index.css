@@ -1,5 +1,5 @@
 :root {
-  --main-bg-color: #23272F;
+  --main-bg-color: #23272f;
 
   --text-color: #fff;
 
@@ -37,15 +37,13 @@ body {
   background-color: var(--main-bg-color);
 }
 
-
-
 @media (prefers-color-scheme: light) {
   :root {
     --main-bg-color: #fff;
     --text-color: #000;
 
     --btn-bg-color: #16444f;
-    --btn-text-color: #57C4DC;
+    --btn-text-color: #57c4dc;
 
     --card-bg-color: #ebebf0;
   }
@@ -53,7 +51,7 @@ body {
 
 @media (prefers-color-scheme: light) {
   :root {
-    --main-bg-color: #23272F;
+    --main-bg-color: #23272f;
     --text-color: #fff;
 
     --btn-bg-color: #383b3f;

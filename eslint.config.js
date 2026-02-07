@@ -1,63 +1,70 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
-import prettier from 'eslint-plugin-prettier'
-import { defineConfig, globalIgnores } from 'eslint/config'
+import js from "@eslint/js";
+import globals from "globals";
+import reactHooks from "eslint-plugin-react-hooks";
+import reactRefresh from "eslint-plugin-react-refresh";
+import prettier from "eslint-plugin-prettier";
+import { defineConfig, globalIgnores } from "eslint/config";
 
 export default defineConfig([
-  globalIgnores(['dist']),
+  globalIgnores(["dist"]),
 
   {
-    files: ['**/*.{js,jsx}'],
+    files: ["**/*.{js,jsx}"],
 
-    extends: [js.configs.recommended, reactHooks.configs.flat.recommended, reactRefresh.configs.vite],
+    extends: [
+      js.configs.recommended,
+      reactHooks.configs.flat.recommended,
+      reactRefresh.configs.vite,
+    ],
 
     plugins: {
-      prettier
+      prettier,
     },
 
     languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
+      ecmaVersion: "latest",
+      sourceType: "module",
       globals: globals.browser,
       parserOptions: {
-        ecmaFeatures: { jsx: true }
-      }
+        ecmaFeatures: { jsx: true },
+      },
     },
 
     rules: {
       /* ==== Code Quality ==== */
-      'no-unused-vars': [
-        'warn',
+      "no-unused-vars": [
+        "warn",
         {
-          varsIgnorePattern: '^_',
-          argsIgnorePattern: '^_',
+          varsIgnorePattern: "^_",
+          argsIgnorePattern: "^_",
           ignoreRestSiblings: true,
-          caughtErrorsIgnorePattern: '^_',
-          ignoreJSX: true // вот эта опция
-        }
+          caughtErrorsIgnorePattern: "^_",
+          ignoreJSX: true, // вот эта опция
+        },
       ],
-      'no-console': 'warn',
+      "no-console": "warn",
 
       /* ==== React ==== */
-      'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
-      'react-hooks/exhaustive-deps': 'warn',
+      "react-refresh/only-export-components": [
+        "warn",
+        { allowConstantExport: true },
+      ],
+      "react-hooks/exhaustive-deps": "warn",
 
       /* ==== Prettier ==== */
-      'prettier/prettier': [
-        'error',
+      "prettier/prettier": [
+        "error",
         {
           semi: false,
           singleQuote: true,
-          trailingComma: 'none',
+          trailingComma: "none",
           printWidth: 130,
           tabWidth: 2,
           bracketSpacing: true,
-          arrowParens: 'always',
-          endOfLine: 'auto'
-        }
-      ]
-    }
-  }
-])
+          arrowParens: "always",
+          endOfLine: "auto",
+        },
+      ],
+    },
+  },
+]);
